@@ -136,6 +136,31 @@
             background-color: var(--secondary-color);
         }
 
+        .section-divider {
+            position: relative;
+            height: 1px;
+            background: #e9ecef;
+            /* light grey line */
+            margin: 24px 0;
+            /* space between rows */
+        }
+
+        .section-divider::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -1px;
+            /* align with the line */
+            height: 3px;
+            /* thickness of green accent */
+            width: 80px;
+            /* length of green accent */
+            background: #57cc99;
+            /* your green */
+            border-radius: 2px;
+        }
+
+
         .subject-card {
             border: none;
             border-radius: 10px;
@@ -441,7 +466,7 @@
                         </div>
                     </div>
 
-                      <!-- ✅ Physics (PDF download style) -->
+                    <!-- ✅ Physics (PDF download style) -->
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card compact-card">
                             <div class="card-header">Physics</div>
@@ -489,15 +514,190 @@
                         </div>
                     </div>
 
+
+
                 </div>
+                <div class="section-divider"></div>
+
+                <div class="row mt-3">
+
+                    <!-- ✅ History (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">History</div>
+                            <div class="card-body">
+                                <img src="/img/HistoryNewCurriculum.avif" alt="History New Curriculum"
+                                    class="subject-img">
+
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_58985b0b54a44e8ea1d47f6a9084ec22.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Geography (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">Physics</div>
+                            <div class="card-body">
+                                <img src="/img/GeographyNewCurriculum.avif" alt="Geography New Curriculum"
+                                    class="subject-img">
+
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_4c7293db55e04f86ae913f5463f8cf2f.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ✅ English and Lit (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">English and Literature</div>
+                            <div class="card-body">
+                                <img src="/img/EnglishNewCurriculum.avif" alt="English New Curriculum"
+                                    class="subject-img">
+
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_2e412ace726545d995d1aa7b461f25c9.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ✅ CRE (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">CRE</div>
+                            <div class="card-body">
+                                <img src="/img/CRENewCurriculum.avif" alt="Chemistry New Curriculum"
+                                    class="subject-img">
+
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_8228c5980fc74b2ea1f3fc214a4cbbc5.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="section-divider"></div>
+                <div class="row mt-3">
+
+                    <!-- ✅ Free Chemistry PowerPoints -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">Free Chemistry PowerPoints</div>
+                            <div class="card-body">
+                                <img src="/img/CHEMISTRYCHAPTERONEPOWERPOINTCOVER.avif" alt="Chemistry New Curriculum"
+                                    class="subject-img">
+
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_d17955b48a0742c696f6d87154aad31d.pptx?dn=TOPIC%20ONE_Chemistry%20and%20Society.pptx"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </section>
 
-            <!-- A-Level/UACE Section -->
+            <!--O-Level/UCE notes Section -->
             <section class="mb-5">
-                <h2 class="section-title">A-Level/U.A.C.E Notes, Videos & Exercises</h2>
+                <h2 class="section-title">O-Level/U.C.E Notes, Videos & Exercises</h2>
                 <div class="row">
 
                     <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Biology</div>
+                            <div class="card-body">
+                                <div class="subject-level">S1 - S4</div>
+                                <img src="/img/oBiology.avif" alt="Biology">
+                                <p>Complete notes, videos, and exercises for Ordinary Level Biology.</p>
+
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/ordinary-level-biology">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Physics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S1 - S4</div>
+                                <img src="/img/PhysicsO.avif" alt="">
+                                <p>Complete notes, videos, and exercises for Ordinary Level Physics.</p>
+
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/ordinary-level-physics">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S1 - S4</div>
+                                <img src="/img/oMath.avif" alt="">
+                                <p>Complete notes, videos, and exercises for Ordinary Level Mathematics.</p>
+
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/ordinary-level-mathematics">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Chemistry</div>
+                            <div class="card-body">
+                                <div class="subject-level">S1 - S4</div>
+                                <img src="/img/oChemistry.avif" alt="">
+                                <p>Complete notes, videos, and exercises for Ordinary Level Chemistry.</p>
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/o-level-chemisty">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- <div class="load-more">
+                    <button class="btn btn-load-more">Load More <i class="fas fa-chevron-down ms-1"></i></button>
+                </div> -->
+                <div class="load-more">
+                    <button class="btn btn-load-more"
+                        onclick="window.location.href='https://kusomaonline.learnworlds.com/courses'">
+                        Load More <i class="fas fa-chevron-down ms-1"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- A-Level/UACE Question Banks -->
+            <section class="mb-5">
+                <h2 class="section-title">A-Level/U.A.C.E Question Banks:Past Papers</h2>
+                <div class="row">
+
+                    <!-- <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
                             <div class="card-header">Economics</div>
                             <div class="card-body">
@@ -537,14 +737,15 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
-                            <div class="card-header">History</div>
+                            <div class="card-header">Economics</div>
                             <div class="card-body">
                                 <div class="subject-level">S.5 & S.6</div>
-                                <p>Complete notes, videos, and exercises for History.</p>
+                                <img src="/img/Economics.avif" alt="">
+                                <p>Question Banks for Advanced Level Economics.</p>
                                 <div class="coming-soon">Coming Soon</div>
                             </div>
                         </div>
@@ -557,8 +758,392 @@
                 </div>
             </section>
 
-            <!-- NCDC Resources Section -->
+            <!-- A-Level/UACE Section -->
             <section class="mb-5">
+                <h2 class="section-title">A-Level/U.A.C.E Notes, Videos & Exercises</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Economics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Advanced Level Economics.</p>
+                                <img src="/img/aEconomics.avif" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/senior-five-economics">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Entrepreneurship</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Entrepreneurship Education.</p>
+                                <img src="/img/aEntrepreneurship.avif" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/entrepreneurship-p230">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for A-level Mathematics.</p>
+                                <img src="/img/maths-a-level-image.jpg" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/uace-mathematics-code-p210-1">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">History</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Advanced Level History.</p>
+                                <img src="/img/aHistory.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="load-more">
+                    <button class="btn btn-load-more"
+                        onclick="window.location.href='https://kusomaonline.learnworlds.com/courses'">
+                        Load More <i class="fas fa-chevron-down ms-1"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Personal Development Section -->
+            <section class="mb-5">
+                <h2 class="section-title">Personal Development</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Self Employment for Young People</div>
+                            <div class="card-body">
+                                <div class="subject-level">For Youths</div>
+                                <!-- <p>Complete notes, videos, and exercises for Advanced Level Economics.</p> -->
+                                <img src="/img/Selfemployment.avif" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/self-employment-for-young-people">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Entrepreneurship</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Entrepreneurship Education.</p>
+                                <img src="/img/aEntrepreneurship.avif" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/entrepreneurship-p230">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for A-level Mathematics.</p>
+                                <img src="/img/maths-a-level-image.jpg" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/uace-mathematics-code-p210-1">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">History</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Advanced Level History.</p>
+                                <img src="/img/aHistory.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+
+                <!-- <div class="load-more">
+                    <button class="btn btn-load-more"
+                        onclick="window.location.href='https://kusomaonline.learnworlds.com/courses'">
+                        Load More <i class="fas fa-chevron-down ms-1"></i>
+                    </button>
+                </div> -->
+            </section>
+
+            <!-- Primary School Section -->
+            <section class="mb-5">
+                <h2 class="section-title">Primary School</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">P.L.E Past Papers</div>
+                            <div class="card-body">
+                                <div class="subject-level">P.5 - P.7</div>
+                                <!-- <p>Complete notes, videos, and exercises for Advanced Level Economics.</p> -->
+                                <img src="/img/primary.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
+                                <!-- <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/self-employment-for-young-people">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Entrepreneurship</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Entrepreneurship Education.</p>
+                                <img src="/img/aEntrepreneurship.avif" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/entrepreneurship-p230">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for A-level Mathematics.</p>
+                                <img src="/img/maths-a-level-image.jpg" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/uace-mathematics-code-p210-1">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">History</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Advanced Level History.</p>
+                                <img src="/img/aHistory.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+
+                <!-- <div class="load-more">
+                    <button class="btn btn-load-more"
+                        onclick="window.location.href='https://kusomaonline.learnworlds.com/courses'">
+                        Load More <i class="fas fa-chevron-down ms-1"></i>
+                    </button>
+                </div> -->
+            </section>
+
+            <!-- Early Childhood Development Section -->
+            <section class="mb-5">
+                <h2 class="section-title">Early Childhood Development</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Writing</div>
+                            <div class="card-body">
+                                <div class="subject-level">Nursery</div>
+                                <!-- <p>Complete notes, videos, and exercises for Advanced Level Economics.</p> -->
+                                <img src="/img/early_childhood.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
+                                <!-- <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/self-employment-for-young-people">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Entrepreneurship</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Entrepreneurship Education.</p>
+                                <img src="/img/aEntrepreneurship.avif" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/entrepreneurship-p230">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for A-level Mathematics.</p>
+                                <img src="/img/maths-a-level-image.jpg" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/uace-mathematics-code-p210-1">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">History</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Advanced Level History.</p>
+                                <img src="/img/aHistory.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+
+                <!-- <div class="load-more">
+                    <button class="btn btn-load-more"
+                        onclick="window.location.href='https://kusomaonline.learnworlds.com/courses'">
+                        Load More <i class="fas fa-chevron-down ms-1"></i>
+                    </button>
+                </div> -->
+            </section>
+
+            <!-- Blog Section -->
+            <!-- <section class="mb-5">
+                <h2 class="section-title">Blog</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">ACTIVITY OF INTEGRATION IN THE NEW CURRICULUM</div>
+                            <div class="card-body">
+                                <div class="subject-level">New Ugandan Curriculum</div>
+                               <p>Complete notes, videos, and exercises for Advanced Level Economics.</p> -->
+                                <!-- <img src="/img/blog1.avif" alt=""> -->
+                                
+                                <!-- <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/self-employment-for-young-people">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button> -->
+                            <!-- </div>
+                        </div>
+                    </div>
+
+                     <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <a href="blog.html"><div class="card-header">Frequently Asked Questions (FAQ)</div></a>
+                            <div class="card-body">
+                                <div class="subject-level">General Information</div>
+                                <p>Complete notes, videos, and exercises for Advanced Level Economics.</p> -->
+                                <!-- <img src="/img/faq.avif" alt=""> --> 
+                                
+                                <!-- <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/self-employment-for-young-people">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button> -->
+                            <!-- </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Entrepreneurship</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Entrepreneurship Education.</p>
+                                <img src="/img/aEntrepreneurship.avif" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/entrepreneurship-p230">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for A-level Mathematics.</p>
+                                <img src="/img/maths-a-level-image.jpg" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/uace-mathematics-code-p210-1">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">History</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Advanced Level History.</p>
+                                <img src="/img/aHistory.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                <!-- </div> -->
+
+                <!-- <div class="load-more">
+                    <button class="btn btn-load-more"
+                        onclick="window.location.href='https://kusomaonline.learnworlds.com/courses'">
+                        Load More <i class="fas fa-chevron-down ms-1"></i>
+                    </button>
+                </div> -->
+            <!-- </section> --> 
+
+            <!-- NCDC Resources Section -->
+            <!-- <section class="mb-5">
                 <h2 class="section-title">NCDC Official Textbooks</h2>
                 <div class="row">
 
@@ -568,7 +1153,7 @@
                             <h4 class="resource-title">History and Political Education Textbook</h4>
                             <p class="text-muted">Senior One, Lower Secondary Curriculum</p>
 
-                            <!-- ✅ real link (replace href with your pdf) -->
+                           
                             <a class="btn btn-download" href="#" target="_blank" rel="noopener noreferrer">
                                 <i class="fas fa-download me-2"></i>DOWNLOAD
                             </a>
@@ -581,7 +1166,7 @@
                             <h4 class="resource-title">Mathematics Learner's Book</h4>
                             <p class="text-muted">Senior One, Lower Secondary Curriculum</p>
 
-                            <!-- ✅ uses your math pdf link -->
+                           
                             <a class="btn btn-download"
                                 href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_c80974e7e693463cb1c6aaed4be61bc7.pdf"
                                 target="_blank" rel="noopener noreferrer">
@@ -602,11 +1187,11 @@
                         </div>
                     </div>
 
-                </div>
-            </section>
+                </div> -->
+            <!-- </section> -->
 
             <!-- Free Resources Section -->
-            <section class="mb-5">
+            <!-- <section class="mb-5">
                 <h2 class="section-title">Free Learning Resources</h2>
                 <div class="row">
 
@@ -644,7 +1229,7 @@
                     </div>
 
                 </div>
-            </section>
+            </section> -->
         </div>
 
         <!-- Old Curriculum Content (Initially hidden) -->
@@ -660,8 +1245,78 @@
                             <div class="card-header">Mathematics</div>
                             <div class="card-body">
                                 <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams.</p>
+                                <img src="/img/mathematicsO.avif" alt="mathematics O-Level" class="subject-img">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/mathematics-examinations">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Physics</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams.</p>
+                                <img src="/img/PhysicsO.avif" alt="physics-examinations O-Level" class="subject-img">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/physics-examinations">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Biology</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams.</p>
+                                <img src="/img/BiologyO.avif" alt="biology-examinations O-Level" class="subject-img">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/biology-examinations">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Chemistry</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams.</p>
+                                <img src="/img/ChemistryO.avif" alt="chemistry-examinations O-Level"
+                                    class="subject-img">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/chemistry-examinations">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- UCE/O-Level Digital Exams -->
+            <section class="mb-5">
+                <h2 class="section-title">Digital Exams: O-Level Past Papers</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
                                 <p>Past papers and practice exams for O-Level Mathematics.</p>
-                                <button class="btn btn-start" data-course-url="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/mathematics-examinations">
                                     Start Now <i class="fas fa-arrow-right ms-1"></i>
                                 </button>
                             </div>
@@ -849,12 +1504,12 @@
         });
 
         // Optional: Load more button
-        const loadMoreButton = document.querySelector('.btn-load-more');
-        if (loadMoreButton) {
-            loadMoreButton.addEventListener('click', function () {
-                alert('Loading more resources. This would load additional content in a real application.');
-            });
-        }
+        // const loadMoreButton = document.querySelector('.btn-load-more');
+        // if (loadMoreButton) {
+        //     loadMoreButton.addEventListener('click', function () {
+        //         alert('Loading more resources. This would load additional content in a real application.');
+        //     });
+        // }
     </script>
 </body>
 

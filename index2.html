@@ -11,7 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
         :root {
             --primary-color: #1a5f7a;
@@ -321,33 +320,6 @@
                 padding: 0.75rem 1rem;
             }
         }
-
-        /* ✅ PATCH ONLY: Mathematics-style compact card alignment (doesn't change your theme) */
-        .compact-card .card-header {
-            text-align: center;
-            padding: 0.6rem 0.75rem;
-        }
-
-        .compact-card .card-body {
-            padding: 0.6rem 0.6rem 0.9rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .subject-img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            margin: 0 auto 0.5rem;
-        }
-
-        /* optional: remove underline on anchor-buttons */
-        a.btn.btn-download,
-        a.btn.btn-start {
-            text-decoration: none;
-        }
     </style>
 </head>
 
@@ -365,7 +337,7 @@
                         <a href="#" class="nav-link active">Home</a>
                         <a href="#newC" class="nav-link">New Curriculum Resources</a>
                         <a href="#oldC" class="nav-link">Old Curriculum Resources</a>
-                        <a href="#footer" class="nav-link">Contact</a>
+                        <a href="#" class="nav-link">Contact</a>
                     </nav>
                 </div>
                 <div class="d-md-none">
@@ -381,9 +353,9 @@
     <div class="d-md-none bg-light p-3" id="mobileMenu" style="display: none;">
         <nav class="d-flex flex-column">
             <a href="#" class="nav-link text-dark mb-2">Home</a>
-            <a href="#newC" class="nav-link text-dark mb-2">New Curriculum Resources</a>
-            <a href="#oldC" class="nav-link text-dark mb-2">Old Curriculum Resources</a>
-            <a href="#footer" class="nav-link text-dark">Contact</a>
+            <a href="#" class="nav-link text-dark mb-2">New Curriculum Resources</a>
+            <a href="#" class="nav-link text-dark mb-2">Old Curriculum Resources</a>
+            <a href="#" class="nav-link text-dark">Contact</a>
         </nav>
     </div>
 
@@ -401,13 +373,28 @@
                 </div>
             </div>
 
+
+
             <!-- Curriculum Tabs -->
+            <!-- <ul class="nav nav-tabs curriculum-tabs justify-content-center">
+                <li class="nav-item"><div id="newC">
+                    <a class="nav-link active" data-curriculum="new" href="#">New Curriculum</a> </div>
+                </li>
+                <li class="nav-item"><div id="oldC">
+                    <a class="nav-link" data-curriculum="old" href="#">Old Curriculum</a> </div>
+                </li>
+            </ul> -->
             <ul class="nav nav-tabs curriculum-tabs justify-content-center">
                 <li class="nav-item">
-                    <a id="newC" class="nav-link active" data-curriculum="new" href="#">New Curriculum</a>
+                    <a id="newC" class="nav-link active" data-curriculum="new" href="#">
+                        New Curriculum
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a id="oldC" class="nav-link" data-curriculum="old" href="#">Old Curriculum</a>
+                    <a id="oldC" class="nav-link" data-curriculum="old" href="#">
+                        Old Curriculum
+                    </a>
                 </li>
             </ul>
 
@@ -416,52 +403,38 @@
 
     <!-- Main Content -->
     <main class="container my-5">
-
         <!-- New Curriculum Content (Initially visible) -->
         <div id="newCurriculumContent">
-
             <!-- UCE/O-Level Section -->
             <section class="mb-5">
                 <h2 class="section-title">Notes, Videos & Exercises: UCE/O-Level</h2>
                 <div class="row">
-
-                    <!-- ✅ Biology (PDF download style) -->
                     <div class="col-md-3 col-sm-6">
-                        <div class="card subject-card compact-card">
+                        <div class="card subject-card">
                             <div class="card-header">Biology</div>
                             <div class="card-body">
-                                <img src="/img/BiologyNewCurriculum.avif" alt="Biology New Curriculum"
-                                    class="subject-img">
-
-                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_e8473b80330a4ba4a5eb4e0bad12ad5d.pdf"
-                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
-                                    Download <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
+                                <div class="subject-level">S.1 - S.4</div>
+                                <p>Complete notes, videos, and exercises for Senior 1 to Senior 4 Biology.</p>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
                             </div>
                         </div>
                     </div>
-
-                      <!-- ✅ Physics (PDF download style) -->
                     <div class="col-md-3 col-sm-6">
-                        <div class="card subject-card compact-card">
+                        <div class="card subject-card">
                             <div class="card-header">Physics</div>
                             <div class="card-body">
-                                <img src="/img/PhysicsNewCurriculum.avif" alt="Physics New Curriculum"
-                                    class="subject-img">
-
-                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_bb03afeccbe546198f90eecf1c103234.pdf"
-                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
-                                    Download <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
+                                <div class="subject-level">S.1 - S.4</div>
+                                <p>Complete notes, videos, and exercises for Senior 1 to Senior 4 Physics.</p>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- ✅ Mathematics (PDF download style) -->
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card compact-card">
-                            <div class="card-header">Mathematics</div>
-                            <div class="card-body">
+                            <div class="card-header text-center">Mathematics</div>
+
+                            <div class="card-body d-flex flex-column align-items-center">
                                 <img src="/img/MathematicsNewCurriculumPrototype.avif" alt="Mathematics New Curriculum"
                                     class="subject-img">
 
@@ -473,22 +446,16 @@
                         </div>
                     </div>
 
-                    <!-- ✅ Chemistry (PDF download style) -->
                     <div class="col-md-3 col-sm-6">
-                        <div class="card subject-card compact-card">
+                        <div class="card subject-card">
                             <div class="card-header">Chemistry</div>
                             <div class="card-body">
-                                <img src="/img/ChemistryNewCurriculum.avif" alt="Chemistry New Curriculum"
-                                    class="subject-img">
-
-                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_46add59c851545eb9a6debb12120ea30.pdf"
-                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
-                                    Download <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
+                                <div class="subject-level">S.1 - S.4</div>
+                                <p>Complete notes, videos, and exercises for Senior 1 to Senior 4 Chemistry.</p>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -496,49 +463,36 @@
             <section class="mb-5">
                 <h2 class="section-title">A-Level/U.A.C.E Notes, Videos & Exercises</h2>
                 <div class="row">
-
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
                             <div class="card-header">Economics</div>
                             <div class="card-body">
                                 <div class="subject-level">S.5 & S.6</div>
                                 <p>Complete notes, videos, and exercises for Advanced Level Economics.</p>
-
-                                <button class="btn btn-start" data-course-url="">
-                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
-                                </button>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
                             <div class="card-header">Entrepreneurship</div>
                             <div class="card-body">
                                 <div class="subject-level">S.5 & S.6</div>
                                 <p>Complete notes, videos, and exercises for Entrepreneurship Education.</p>
-
-                                <button class="btn btn-start" data-course-url="">
-                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
-                                </button>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
                             <div class="card-header">Physical Geography</div>
                             <div class="card-body">
                                 <div class="subject-level">S.5 & S.6</div>
                                 <p>Complete notes, videos, and exercises for Physical Geography.</p>
-
-                                <button class="btn btn-start" data-course-url="">
-                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
-                                </button>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
                             <div class="card-header">History</div>
@@ -549,9 +503,7 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
                 <div class="load-more">
                     <button class="btn btn-load-more">Load More <i class="fas fa-chevron-down ms-1"></i></button>
                 </div>
@@ -561,47 +513,30 @@
             <section class="mb-5">
                 <h2 class="section-title">NCDC Official Textbooks</h2>
                 <div class="row">
-
                     <div class="col-md-4">
                         <div class="resource-card">
                             <div class="ncdc-badge">NCDC</div>
                             <h4 class="resource-title">History and Political Education Textbook</h4>
                             <p class="text-muted">Senior One, Lower Secondary Curriculum</p>
-
-                            <!-- ✅ real link (replace href with your pdf) -->
-                            <a class="btn btn-download" href="#" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-download me-2"></i>DOWNLOAD
-                            </a>
+                            <button class="btn btn-download"><i class="fas fa-download me-2"></i>DOWNLOAD</button>
                         </div>
                     </div>
-
                     <div class="col-md-4">
                         <div class="resource-card">
                             <div class="ncdc-badge">NCDC</div>
                             <h4 class="resource-title">Mathematics Learner's Book</h4>
                             <p class="text-muted">Senior One, Lower Secondary Curriculum</p>
-
-                            <!-- ✅ uses your math pdf link -->
-                            <a class="btn btn-download"
-                                href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_c80974e7e693463cb1c6aaed4be61bc7.pdf"
-                                target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-download me-2"></i>DOWNLOAD
-                            </a>
+                            <button class="btn btn-download"><i class="fas fa-download me-2"></i>DOWNLOAD</button>
                         </div>
                     </div>
-
                     <div class="col-md-4">
                         <div class="resource-card">
                             <div class="ncdc-badge">NCDC</div>
                             <h4 class="resource-title">Biology Learner's Book</h4>
                             <p class="text-muted">Senior One, Lower Secondary Curriculum</p>
-
-                            <a class="btn btn-download" href="#" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-download me-2"></i>DOWNLOAD
-                            </a>
+                            <button class="btn btn-download"><i class="fas fa-download me-2"></i>DOWNLOAD</button>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -609,31 +544,22 @@
             <section class="mb-5">
                 <h2 class="section-title">Free Learning Resources</h2>
                 <div class="row">
-
                     <div class="col-md-4">
                         <div class="resource-card">
                             <div class="free-badge">FREE POWERPOINT</div>
                             <h4 class="resource-title">Chemistry PowerPoints</h4>
                             <p class="text-muted">Senior One, Chapter One: Chemistry & Society</p>
-
-                            <a class="btn btn-download" href="#" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-download me-2"></i>DOWNLOAD
-                            </a>
+                            <button class="btn btn-download"><i class="fas fa-download me-2"></i>DOWNLOAD</button>
                         </div>
                     </div>
-
                     <div class="col-md-4">
                         <div class="resource-card">
                             <div class="ncdc-badge">PERSONAL DEVELOPMENT</div>
                             <h4 class="resource-title">Self Employment for Young People</h4>
                             <p class="text-muted">Small business guide for young entrepreneurs</p>
-
-                            <button class="btn btn-start" data-course-url="">
-                                Start Now <i class="fas fa-arrow-right ms-1"></i>
-                            </button>
+                            <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
                         </div>
                     </div>
-
                     <div class="col-md-4">
                         <div class="resource-card">
                             <div class="ncdc-badge">EARLY CHILDHOOD</div>
@@ -642,74 +568,60 @@
                             <div class="coming-soon">Coming Soon</div>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
 
         <!-- Old Curriculum Content (Initially hidden) -->
         <div id="oldCurriculumContent" style="display: none;">
-
             <!-- UCE/O-Level Digital Exams -->
             <section class="mb-5">
                 <h2 class="section-title">Digital Exams: O-Level Past Papers</h2>
                 <div class="row">
-
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
                             <div class="card-header">Mathematics</div>
                             <div class="card-body">
                                 <div class="subject-level">O-Level Exams</div>
                                 <p>Past papers and practice exams for O-Level Mathematics.</p>
-                                <button class="btn btn-start" data-course-url="">
-                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
-                                </button>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
                             <div class="card-header">Physics</div>
                             <div class="card-body">
                                 <div class="subject-level">O-Level Exams</div>
                                 <p>Past papers and practice exams for O-Level Physics.</p>
-                                <button class="btn btn-start" data-course-url="">
-                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
-                                </button>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
                             <div class="card-header">Biology</div>
                             <div class="card-body">
                                 <div class="subject-level">O-Level Exams</div>
                                 <p>Past papers and practice exams for O-Level Biology.</p>
-                                <button class="btn btn-start" data-course-url="">
-                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
-                                </button>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
                             <div class="card-header">Chemistry</div>
                             <div class="card-body">
                                 <div class="subject-level">O-Level Exams</div>
                                 <p>Past papers and practice exams for O-Level Chemistry.</p>
-
-                                <!-- you had an example url here, keep it -->
                                 <button class="btn btn-start"
                                     data-course-url="https://kusomaonline.learnworlds.com/course/biology-examinations">
                                     Start Now <i class="fas fa-arrow-right ms-1"></i>
                                 </button>
+                                <!-- <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button> -->
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -751,12 +663,11 @@
                     </div>
                 </div>
             </section>
-
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="footer" id="footer">
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
@@ -785,16 +696,14 @@
                 <div class="col-md-3 mb-4">
                     <h5>Contact</h5>
                     <div class="footer-links">
-                        <a href="#"><i class="fas fa-envelope me-2"></i> kusomaonline@gmail.com</a>
                         <a href="#"><i class="fas fa-envelope me-2"></i> info@kusomaonline.com</a>
-                        <a href="#"><i class="fas fa-phone me-2"></i> +256 782 017086</a>
-                        <a href="#"><i class="fas fa-phone me-2"></i> +256 754 552217</a>
+                        <a href="#"><i class="fas fa-phone me-2"></i> +256 700 123456</a>
                         <a href="#"><i class="fas fa-map-marker-alt me-2"></i> Kampala, Uganda</a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 Kusoma Online. All rights reserved.</p>
+                <p>&copy; 2025 Kusoma Online. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -818,38 +727,62 @@
             tab.addEventListener('click', function (e) {
                 e.preventDefault();
 
+                // Update active tab
                 curriculumTabs.forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
 
+                // Show/hide appropriate content
                 if (this.getAttribute('data-curriculum') === 'new') {
                     newCurriculumContent.style.display = 'block';
                     oldCurriculumContent.style.display = 'none';
+
+                    // Update hero section title
                     document.querySelector('.hero h1').textContent = 'Competence-Based Curriculum (The New)';
                 } else {
                     newCurriculumContent.style.display = 'none';
                     oldCurriculumContent.style.display = 'block';
+
+                    // Update hero section title
                     document.querySelector('.hero h1').textContent = 'Knowledge-Based Curriculum (The Old)';
                 }
             });
         });
 
-        // ✅ Start Now buttons: only redirect if data-course-url is provided
-        document.querySelectorAll('.btn-start[data-course-url]').forEach(button => {
+        // Simulate button clicks
+        // const startButtons = document.querySelectorAll('.btn-start');
+        const downloadButtons = document.querySelectorAll('.btn-download');
+        const loadMoreButton = document.querySelector('.btn-load-more');
+
+        // startButtons.forEach(button => {
+        //     button.addEventListener('click', function () {
+        //         const subject = this.closest('.subject-card').querySelector('.card-header').textContent;
+        //         alert(`Starting ${subject} course. This would navigate to the course page in a real application.`);
+        //     });
+        // });
+        const startButtons = document.querySelectorAll('.btn-start');
+        startButtons.forEach(button => {
             button.addEventListener('click', function () {
                 const courseUrl = this.getAttribute('data-course-url');
 
-                if (courseUrl && courseUrl.trim() !== '') {
+                if (courseUrl) {
+                    // Redirect to the LearnWorlds course URL
                     window.location.href = courseUrl;
                 } else {
+                    // Fallback for buttons without URLs (like History with "Coming Soon")
                     const subjectCard = this.closest('.subject-card');
-                    const subject = subjectCard ? subjectCard.querySelector('.card-header')?.textContent : 'This';
+                    const subject = subjectCard.querySelector('.card-header').textContent;
                     alert(`The ${subject} course is coming soon!`);
                 }
             });
         });
 
-        // Optional: Load more button
-        const loadMoreButton = document.querySelector('.btn-load-more');
+        downloadButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const resource = this.closest('.resource-card').querySelector('.resource-title').textContent;
+                alert(`Downloading ${resource}. This would initiate a download in a real application.`);
+            });
+        });
+
         if (loadMoreButton) {
             loadMoreButton.addEventListener('click', function () {
                 alert('Loading more resources. This would load additional content in a real application.');

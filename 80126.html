@@ -140,7 +140,9 @@
             position: relative;
             height: 1px;
             background: #e9ecef;
+            /* light grey line */
             margin: 24px 0;
+            /* space between rows */
         }
 
         .section-divider::before {
@@ -148,9 +150,13 @@
             position: absolute;
             left: 0;
             top: -1px;
+            /* align with the line */
             height: 3px;
+            /* thickness of green accent */
             width: 80px;
+            /* length of green accent */
             background: #57cc99;
+            /* your green */
             border-radius: 2px;
         }
 
@@ -218,6 +224,17 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
+        .ncdc-badge {
+            background-color: #f0f7ff;
+            color: var(--primary-color);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+
         .resource-title {
             color: var(--primary-color);
             font-weight: 600;
@@ -248,6 +265,17 @@
             font-size: 0.85rem;
             display: inline-block;
             margin-top: 0.5rem;
+        }
+
+        .free-badge {
+            background-color: #ff7b54;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 0.75rem;
         }
 
         .footer {
@@ -362,16 +390,17 @@
         }
 
         /* ===========================================================
-           ✅ Slide-in from BOTTOM RIGHT (desktop)
-           - Desktop: bottom-right + slides diagonally (up-left)
-           - Mobile: full-width bottom slide-up (clean)
+           ✅ OPTION B: Slide-in from LEFT (instead of bottom)
+           - Desktop: left slide-in
+           - Mobile: bottom slide-up (so it doesn't cover content badly)
            =========================================================== */
 
+        /* Floating Attention Banner (Kusoma Online) */
         .kusoma-float-banner {
             position: fixed;
-            right: 18px;
+            left: 18px;
             bottom: 18px;
-            left: auto;
+            right: auto;
             width: min(420px, calc(100% - 36px));
             background: #ffffff;
             border: 1px solid #dee2e6;
@@ -381,15 +410,15 @@
             padding: 14px 14px 12px;
             z-index: 9999;
 
-            /* start slightly off-screen bottom-right */
-            transform: translate(24px, 24px);
+            /* slide from LEFT */
+            transform: translateX(-24px);
             opacity: 0;
             pointer-events: none;
             transition: all 0.35s ease;
         }
 
         .kusoma-float-banner.show {
-            transform: translate(0, 0);
+            transform: translateX(0);
             opacity: 1;
             pointer-events: auto;
         }
@@ -472,7 +501,7 @@
                 bottom: 12px;
                 width: auto;
 
-                /* mobile: simple bottom slide-up */
+                /* on mobile use bottom slide-up */
                 transform: translateY(20px);
             }
 
@@ -949,7 +978,177 @@
 
         <!-- Old Curriculum Content (Initially hidden) -->
         <div id="oldCurriculumContent" style="display: none;">
-            <!-- ... your old curriculum content stays exactly the same ... -->
+
+            <!-- UCE/O-Level Digital Exams -->
+            <section class="mb-5">
+                <h2 class="section-title">Digital Exams: O-Level Past Papers</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams.</p>
+                                <img src="/img/mathematicsO.avif" alt="mathematics O-Level" class="subject-img">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/mathematics-examinations">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Physics</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams.</p>
+                                <img src="/img/PhysicsO.avif" alt="physics-examinations O-Level" class="subject-img">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/physics-examinations">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Biology</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams.</p>
+                                <img src="/img/BiologyO.avif" alt="biology-examinations O-Level" class="subject-img">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/biology-examinations">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Chemistry</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams.</p>
+                                <img src="/img/ChemistryO.avif" alt="chemistry-examinations O-Level"
+                                    class="subject-img">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/chemistry-examinations">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- UCE/O-Level Digital Exams (duplicate section kept as you had it) -->
+            <section class="mb-5">
+                <h2 class="section-title">Digital Exams: O-Level Past Papers</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams for O-Level Mathematics.</p>
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/mathematics-examinations">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Physics</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams for O-Level Physics.</p>
+                                <button class="btn btn-start" data-course-url="">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Biology</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams for O-Level Biology.</p>
+                                <button class="btn btn-start" data-course-url="">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Chemistry</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams for O-Level Chemistry.</p>
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/biology-examinations">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Question Banks -->
+            <section class="mb-5">
+                <h2 class="section-title">Question Banks: O-Level Past Papers</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="resource-card">
+                            <h4 class="resource-title">Mathematics</h4>
+                            <p class="text-muted">O-Level Exams</p>
+                            <div class="coming-soon">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title mt-5">Question Banks: A-Level Past Papers</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="resource-card">
+                            <h4 class="resource-title">Economics</h4>
+                            <p class="text-muted">S5 - S6</p>
+                            <div class="coming-soon">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Primary School Section -->
+            <section class="mb-5">
+                <h2 class="section-title">Primary School Resources</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="resource-card">
+                            <h4 class="resource-title">P.L.E Past Papers</h4>
+                            <p class="text-muted">Science Exams</p>
+                            <div class="coming-soon">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </main>
 

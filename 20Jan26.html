@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kusoma Online - Practical Education Resources</title>
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #57cc99;
+            --accent-color: #ff7b54;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --gray-color: #6c757d;
+            --light-blue: #e3f2fd;
+        }
+
+        .hero-img {
+            max-width: 320px;
+            height: auto;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), #0d4c6e);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            color: var(--light-color);
+            text-decoration: none;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.3rem;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .hero {
+            background-color: var(--light-blue);
+            padding: 3rem 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .hero h1 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--gray-color);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .curriculum-tabs {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .curriculum-tabs .nav-link {
+            color: var(--gray-color);
+            border: none;
+            border-radius: 0;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .curriculum-tabs .nav-link.active {
+            color: var(--primary-color);
+            background-color: transparent;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #e9ecef;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 70px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .section-divider {
+            position: relative;
+            height: 1px;
+            background: #e9ecef;
+            margin: 24px 0;
+        }
+
+        .section-divider::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -1px;
+            height: 3px;
+            width: 80px;
+            background: #57cc99;
+            border-radius: 2px;
+        }
+
+        .subject-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .subject-card .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 1rem 1.25rem;
+            border: none;
+        }
+
+        .subject-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .subject-level {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-start {
+            background-color: var(--secondary-color);
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn-start:hover {
+            background-color: #46b883;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .resource-card {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background-color: white;
+            transition: all 0.3s;
+        }
+
+        .resource-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .resource-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-download {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .btn-download:hover {
+            background-color: #0d4c6e;
+            color: white;
+        }
+
+        .coming-soon {
+            background-color: #fff3cd;
+            border: 1px solid #ffecb5;
+            color: #856404;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer h5 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .load-more {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .btn-load-more {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            font-weight: 600;
+            padding: 0.6rem 2rem;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+
+        .btn-load-more:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .hero-message {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #f3091c;
+            margin-top: 0.8rem;
+            min-height: 1.5em;
+            animation: fadeInUp 0.8s ease;
+            text-align: center;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .subject-card .card-header {
+                font-size: 1rem;
+                padding: 0.75rem 1rem;
+            }
+        }
+
+        /* ✅ PATCH ONLY: Mathematics-style compact card alignment (doesn't change your theme) */
+        .compact-card .card-header {
+            text-align: center;
+            padding: 0.6rem 0.75rem;
+        }
+
+        .compact-card .card-body {
+            padding: 0.6rem 0.6rem 0.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .subject-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 0.5rem;
+        }
+
+        /* ===========================================================
+           ✅ Slide-in from BOTTOM RIGHT (desktop)
+           - Desktop: bottom-right + slides diagonally (up-left)
+           - Mobile: full-width bottom slide-up (clean)
+           =========================================================== */
+
+        .kusoma-float-banner {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            left: auto;
+            width: min(420px, calc(100% - 36px));
+            background: #ffffff;
+            border: 1px solid #dee2e6;
+            border-left: 6px solid var(--secondary-color);
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+            padding: 14px 14px 12px;
+            z-index: 9999;
+
+            /* start slightly off-screen bottom-right */
+            transform: translate(24px, 24px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.35s ease;
+        }
+
+        .kusoma-float-banner.show {
+            transform: translate(0, 0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .kusoma-float-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .kusoma-float-title {
+            font-weight: 800;
+            color: var(--primary-color);
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .kusoma-float-text {
+            margin: 6px 0 10px;
+            color: #495057;
+            font-size: 0.95rem;
+            line-height: 1.35;
+        }
+
+        .kusoma-float-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .kusoma-float-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.15s ease, opacity 0.15s ease;
+            text-decoration: none;
+        }
+
+        .kusoma-float-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .kusoma-float-btn.primary {
+            background: var(--secondary-color);
+            color: #ffffff;
+        }
+
+        .kusoma-float-btn.secondary {
+            background: #e9ecef;
+            color: #343a40;
+        }
+
+        .kusoma-float-close {
+            background: transparent;
+            border: none;
+            font-size: 18px;
+            line-height: 1;
+            cursor: pointer;
+            color: #6c757d;
+            padding: 2px 6px;
+            border-radius: 8px;
+        }
+
+        .kusoma-float-close:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 480px) {
+            .kusoma-float-banner {
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
+                width: auto;
+
+                /* mobile: simple bottom slide-up */
+                transform: translateY(20px);
+            }
+
+            .kusoma-float-banner.show {
+                transform: translateY(0);
+            }
+        }
+
+        /* optional: remove underline on anchor-buttons */
+        a.btn.btn-download,
+        a.btn.btn-start {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <a href="#" class="logo"><img src="/img/kusoma.png" alt="Kusoma Online"></a>
+                    <div class="tagline">A Platform Delivering Practical and Relevant Education Resources</div>
+                </div>
+                <div class="d-none d-md-block">
+                    <nav>
+                        <a href="#" class="nav-link active">Home</a>
+                        <a href="#newC" class="nav-link">New Curriculum Resources</a>
+                        <a href="#oldC" class="nav-link">Old Curriculum Resources</a>
+                        <a href="#footer" class="nav-link">Contact</a>
+                    </nav>
+                </div>
+                <div class="d-md-none">
+                    <button class="btn btn-outline-light" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="d-md-none bg-light p-3" id="mobileMenu" style="display: none;">
+        <nav class="d-flex flex-column">
+            <a href="#" class="nav-link text-dark mb-2">Home</a>
+            <a href="#newC" class="nav-link text-dark mb-2">New Curriculum Resources</a>
+            <a href="#oldC" class="nav-link text-dark mb-2">Old Curriculum Resources</a>
+            <a href="#footer" class="nav-link text-dark">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h1 class="text-center">Competence-Based Curriculum (The New)</h1>
+
+                    <div class="hero-message">
+                        <span id="rotatingText"></span>
+                    </div>
+
+                    <p class="text-center">Access comprehensive educational resources for the new curriculum including
+                        notes, videos, exercises, and textbooks for all levels.</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <img src="/img/hero.png" alt="Education Resources" class="hero-img">
+                </div>
+            </div>
+
+            <!-- Curriculum Tabs -->
+            <ul class="nav nav-tabs curriculum-tabs justify-content-center">
+                <li class="nav-item">
+                    <a id="newC" class="nav-link active" data-curriculum="new" href="#">New Curriculum</a>
+                </li>
+                <li class="nav-item">
+                    <a id="oldC" class="nav-link" data-curriculum="old" href="#">Old Curriculum</a>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+
+        <!-- New Curriculum Content (Initially visible) -->
+        <div id="newCurriculumContent">
+
+            <!-- A-Level/UACE Section -->
+            <section class="mb-5">
+                <h2 class="section-title">A-Level/U.A.C.E Notes, Videos & Exercises</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for A-level Mathematics.</p>
+                                <img src="/img/maths-a-level-image.jpg" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/uace-mathematics-code-p210-1">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Economics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Advanced Level Economics.</p>
+                                <img src="/img/aEconomics.avif" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/senior-five-economics">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Entrepreneurship</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Entrepreneurship Education.</p>
+                                <img src="/img/aEntrepreneurship.avif" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/entrepreneurship-p230">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">History</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <p>Complete notes, videos, and exercises for Advanced Level History.</p>
+                                <img src="/img/aHistory.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="load-more">
+                    <button class="btn btn-load-more"
+                        onclick="window.location.href='https://kusomaonline.learnworlds.com/courses'">
+                        Load More <i class="fas fa-chevron-down ms-1"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- UCE/O-Level Section -->
+            <section class="mb-5">
+                <h2 class="section-title">Notes, Videos & Exercises: UCE/O-Level</h2>
+                <div class="row">
+
+                    <!-- ✅ Biology (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">Biology</div>
+                            <div class="card-body">
+                                <img src="/img/BiologyNewCurriculum.avif" alt="Biology New Curriculum"
+                                    class="subject-img">
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_e8473b80330a4ba4a5eb4e0bad12ad5d.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Physics (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">Physics</div>
+                            <div class="card-body">
+                                <img src="/img/PhysicsNewCurriculum.avif" alt="Physics New Curriculum"
+                                    class="subject-img">
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_bb03afeccbe546198f90eecf1c103234.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Mathematics (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <img src="/img/MathematicsNewCurriculumPrototype.avif" alt="Mathematics New Curriculum"
+                                    class="subject-img">
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_c80974e7e693463cb1c6aaed4be61bc7.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Chemistry (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">Chemistry</div>
+                            <div class="card-body">
+                                <img src="/img/ChemistryNewCurriculum.avif" alt="Chemistry New Curriculum"
+                                    class="subject-img">
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_46add59c851545eb9a6debb12120ea30.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="section-divider"></div>
+
+                <div class="row mt-3">
+
+                    <!-- ✅ History (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">History</div>
+                            <div class="card-body">
+                                <img src="/img/HistoryNewCurriculum.avif" alt="History New Curriculum"
+                                    class="subject-img">
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_58985b0b54a44e8ea1d47f6a9084ec22.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Geography (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">Physics</div>
+                            <div class="card-body">
+                                <img src="/img/GeographyNewCurriculum.avif" alt="Geography New Curriculum"
+                                    class="subject-img">
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_4c7293db55e04f86ae913f5463f8cf2f.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ✅ English and Lit (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">English and Literature</div>
+                            <div class="card-body">
+                                <img src="/img/EnglishNewCurriculum.avif" alt="English New Curriculum"
+                                    class="subject-img">
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_2e412ace726545d995d1aa7b461f25c9.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ✅ CRE (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">CRE</div>
+                            <div class="card-body">
+                                <img src="/img/CRENewCurriculum.avif" alt="CRE New Curriculum" class="subject-img">
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_8228c5980fc74b2ea1f3fc214a4cbbc5.pdf"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="section-divider"></div>
+
+                <div class="row mt-3">
+
+                    <!-- ✅ Free Chemistry PowerPoints -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card compact-card">
+                            <div class="card-header">Free Chemistry PowerPoints</div>
+                            <div class="card-body">
+                                <img src="/img/CHEMISTRYCHAPTERONEPOWERPOINTCOVER.avif" alt="Chemistry PowerPoints"
+                                    class="subject-img">
+
+                                <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_d17955b48a0742c696f6d87154aad31d.pptx?dn=TOPIC%20ONE_Chemistry%20and%20Society.pptx"
+                                    class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
+                                    Download <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!--O-Level/UCE notes Section -->
+            <section class="mb-5">
+                <h2 class="section-title">O-Level/U.C.E Notes, Videos & Exercises</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Biology</div>
+                            <div class="card-body">
+                                <div class="subject-level">S1 - S4</div>
+                                <img src="/img/oBiology.avif" alt="Biology">
+                                <p>Complete notes, videos, and exercises for Ordinary Level Biology.</p>
+
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/ordinary-level-biology">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Physics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S1 - S4</div>
+                                <img src="/img/PhysicsO.avif" alt="">
+                                <p>Complete notes, videos, and exercises for Ordinary Level Physics.</p>
+
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/ordinary-level-physics">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S1 - S4</div>
+                                <img src="/img/oMath.avif" alt="">
+                                <p>Complete notes, videos, and exercises for Ordinary Level Mathematics.</p>
+
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/ordinary-level-mathematics">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Chemistry</div>
+                            <div class="card-body">
+                                <div class="subject-level">S1 - S4</div>
+                                <img src="/img/oChemistry.avif" alt="">
+                                <p>Complete notes, videos, and exercises for Ordinary Level Chemistry.</p>
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/o-level-chemisty">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="load-more">
+                    <button class="btn btn-load-more"
+                        onclick="window.location.href='https://kusomaonline.learnworlds.com/courses'">
+                        Load More <i class="fas fa-chevron-down ms-1"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- A-Level/UACE Question Banks -->
+            <section class="mb-5">
+                <h2 class="section-title">A-Level/U.A.C.E Question Banks:Past Papers</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Economics</div>
+                            <div class="card-body">
+                                <div class="subject-level">S.5 & S.6</div>
+                                <img src="/img/Economics.avif" alt="">
+                                <p>Question Banks for Advanced Level Economics.</p>
+                                <div class="coming-soon">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="load-more">
+                    <button class="btn btn-load-more">Load More <i class="fas fa-chevron-down ms-1"></i></button>
+                </div>
+            </section>
+
+            <!-- Personal Development Section -->
+            <section class="mb-5">
+                <h2 class="section-title">Personal Development</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Self Employment for Young People</div>
+                            <div class="card-body">
+                                <div class="subject-level">For Youths</div>
+                                <img src="/img/Selfemployment.avif" alt="">
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/self-employment-for-young-people">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Primary School Section -->
+            <section class="mb-5">
+                <h2 class="section-title">Primary School</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">P.L.E Past Papers</div>
+                            <div class="card-body">
+                                <div class="subject-level">P.5 - P.7</div>
+                                <img src="/img/primary.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Early Childhood Development Section -->
+            <section class="mb-5">
+                <h2 class="section-title">Early Childhood Development</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Writing</div>
+                            <div class="card-body">
+                                <div class="subject-level">Nursery</div>
+                                <img src="/img/early_childhood.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Old Curriculum Content (Initially hidden) -->
+
+        <div id="oldCurriculumContent" style="display: none;">
+            <!-- UCE/O-Level Digital Exams -->
+            <section class="mb-5">
+                <h2 class="section-title">Digital Exams: O-Level Past Papers</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Mathematics</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams for O-Level Mathematics.</p>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Physics</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams for O-Level Physics.</p>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Biology</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams for O-Level Biology.</p>
+                                <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card subject-card">
+                            <div class="card-header">Chemistry</div>
+                            <div class="card-body">
+                                <div class="subject-level">O-Level Exams</div>
+                                <p>Past papers and practice exams for O-Level Chemistry.</p>
+                                <button class="btn btn-start"
+                                    data-course-url="https://kusomaonline.learnworlds.com/course/biology-examinations">
+                                    Start Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                                <!-- <button class="btn btn-start">Start Now <i class="fas fa-arrow-right ms-1"></i></button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Question Banks -->
+            <section class="mb-5">
+                <h2 class="section-title">Question Banks: O-Level Past Papers</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="resource-card">
+                            <h4 class="resource-title">Mathematics</h4>
+                            <p class="text-muted">O-Level Exams</p>
+                            <div class="coming-soon">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title mt-5">Question Banks: A-Level Past Papers</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="resource-card">
+                            <h4 class="resource-title">Economics</h4>
+                            <p class="text-muted">S5 - S6</p>
+                            <div class="coming-soon">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Primary School Section -->
+            <section class="mb-5">
+                <h2 class="section-title">Primary School Resources</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="resource-card">
+                            <h4 class="resource-title">P.L.E Past Papers</h4>
+                            <p class="text-muted">Science Exams</p>
+                            <div class="coming-soon">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Kusoma Online</h5>
+                    <p>A Platform Delivering Practical and Relevant Education Resources for all levels of learners in
+                        Uganda and beyond.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Curriculum</h5>
+                    <div class="footer-links">
+                        <a href="#">New Curriculum</a>
+                        <a href="#">Old Curriculum</a>
+                        <a href="#">Primary Level</a>
+                        <a href="#">Secondary Level</a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Resources</h5>
+                    <div class="footer-links">
+                        <a href="#">Textbooks</a>
+                        <a href="#">Past Papers</a>
+                        <a href="#">Videos</a>
+                        <a href="#">PowerPoints</a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact</h5>
+                    <div class="footer-links">
+                        <a href="#"><i class="fas fa-envelope me-2"></i> kusomaonline@gmail.com</a>
+                        <a href="#"><i class="fas fa-envelope me-2"></i> info@kusomaonline.com</a>
+                        <a href="#"><i class="fas fa-phone me-2"></i> +256 782 017086</a>
+                        <a href="#"><i class="fas fa-phone me-2"></i> +256 754 552217</a>
+                        <a href="#"><i class="fas fa-map-marker-alt me-2"></i> Kampala, Uganda</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Kusoma Online. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Attention Banner -->
+    <div class="kusoma-float-banner" id="kusomaFloatBanner" aria-live="polite">
+        <div class="kusoma-float-top">
+            <div>
+                <p class="kusoma-float-title">A-Level Mathematics: Start Anytime</p>
+                <div class="kusoma-float-text">
+                    You don’t need to be in S.5 to begin. Start early, learn step-by-step, and build confidence.
+                </div>
+            </div>
+            <button class="kusoma-float-close" id="kusomaFloatClose" aria-label="Close banner">✕</button>
+        </div>
+
+        <div class="kusoma-float-actions">
+            <a class="kusoma-float-btn primary" id="kusomaFloatStartBtn"
+                href="https://kusomaonline.learnworlds.com/course/uace-mathematics-code-p210-1">
+                Start Now
+            </a>
+
+            <button class="kusoma-float-btn secondary" id="kusomaFloatRemindBtn" type="button">
+                Later
+            </button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.style.display = mobileMenu.style.display === 'none' || mobileMenu.style.display === '' ? 'block' : 'none';
+        });
+
+        // Curriculum tabs functionality
+        const curriculumTabs = document.querySelectorAll('.curriculum-tabs .nav-link');
+        const newCurriculumContent = document.getElementById('newCurriculumContent');
+        const oldCurriculumContent = document.getElementById('oldCurriculumContent');
+
+        curriculumTabs.forEach(tab => {
+            tab.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                curriculumTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                if (this.getAttribute('data-curriculum') === 'new') {
+                    newCurriculumContent.style.display = 'block';
+                    oldCurriculumContent.style.display = 'none';
+                    document.querySelector('.hero h1').textContent = 'Competence-Based Curriculum (The New)';
+                } else {
+                    newCurriculumContent.style.display = 'none';
+                    oldCurriculumContent.style.display = 'block';
+                    document.querySelector('.hero h1').textContent = 'Knowledge-Based Curriculum (The Old)';
+                }
+            });
+        });
+
+        // ✅ Start Now buttons: only redirect if data-course-url is provided
+        document.querySelectorAll('.btn-start[data-course-url]').forEach(button => {
+            button.addEventListener('click', function () {
+                const courseUrl = this.getAttribute('data-course-url');
+
+                if (courseUrl && courseUrl.trim() !== '') {
+                    window.location.href = courseUrl;
+                } else {
+                    const subjectCard = this.closest('.subject-card');
+                    const subject = subjectCard ? subjectCard.querySelector('.card-header')?.textContent : 'This';
+                    alert(`The ${subject} course is coming soon!`);
+                }
+            });
+        });
+
+        // ✅ Hero rotating message
+        const messages = [
+            "You don’t need to be in S.5 to start A-Level Mathematics",
+            "Start A-Level Mathematics early — step by step",
+            "Build strong foundations before Senior Five",
+            "Learn A-Level Mathematics at your own pace"
+        ];
+
+        let index = 0;
+        const textElement = document.getElementById("rotatingText");
+
+        function rotateText() {
+            if (!textElement) return;
+            textElement.style.opacity = 0;
+            setTimeout(() => {
+                textElement.textContent = messages[index];
+                textElement.style.opacity = 1;
+                index = (index + 1) % messages.length;
+            }, 400);
+        }
+
+        rotateText();
+        setInterval(rotateText, 3000);
+
+        /*
+          Kusoma Floating Banner — LIVE SAFE VERSION
+          - Works on HTTPS (Netlify)
+          - Survives Tracking Prevention / blocked localStorage
+          - Marks "seen" ONLY when user closes
+        */
+        (function () {
+            const banner = document.getElementById("kusomaFloatBanner");
+            const closeBtn = document.getElementById("kusomaFloatClose");
+            const remindBtn = document.getElementById("kusomaFloatRemindBtn");
+
+            if (!banner || !closeBtn || !remindBtn) return;
+
+            const seenKey = "kusoma_banner_seen_v1";
+            const remindKey = "kusoma_banner_remind_until_v1";
+
+            // ✅ SAFE STORAGE (prevents crashes)
+            const storage = {
+                get(key) {
+                    try { return localStorage.getItem(key); } catch (e) { return null; }
+                },
+                set(key, value) {
+                    try { localStorage.setItem(key, value); } catch (e) { }
+                }
+            };
+
+            // ⏳ Respect "Later" (24h)
+            const remindUntil = storage.get(remindKey);
+            if (remindUntil && Date.now() < Number(remindUntil)) return;
+
+            // ❌ If user previously CLOSED it, don't show again
+            if (storage.get(seenKey)) return;
+
+            // 👀 Show banner after delay (DO NOT mark seen yet)
+            setTimeout(() => {
+                banner.classList.add("show");
+            }, 1800);
+
+            function hideBanner(markSeen) {
+                banner.classList.remove("show");
+                if (markSeen) storage.set(seenKey, "1");
+            }
+
+            // ❌ Close = permanently hide
+            closeBtn.addEventListener("click", function () {
+                hideBanner(true);
+            });
+
+            // ⏰ Later = hide for 24 hours
+            remindBtn.addEventListener("click", function () {
+                hideBanner(false);
+                const oneDay = 24 * 60 * 60 * 1000;
+                storage.set(remindKey, Date.now() + oneDay);
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

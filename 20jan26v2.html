@@ -23,10 +23,6 @@
             --light-blue: #e3f2fd;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         .hero-img {
             max-width: 320px;
             height: auto;
@@ -34,25 +30,19 @@
             margin: 0 auto;
             display: block;
             margin: 0 auto;
-            filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.10));
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             line-height: 1.6;
-            background: #ffffff;
         }
 
-        /* ✅ Sticky, elegant header */
         .header {
-            position: sticky;
-            top: 0;
-            z-index: 10000;
             background: linear-gradient(135deg, var(--primary-color), #0d4c6e);
             color: white;
-            padding: 1rem 0;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
@@ -60,14 +50,6 @@
             font-weight: 700;
             color: white;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            max-height: 44px;
-            width: auto;
         }
 
         .logo:hover {
@@ -78,183 +60,45 @@
         .tagline {
             font-size: 0.9rem;
             opacity: 0.9;
-            margin-top: 0.25rem;
+            margin-top: 0.3rem;
         }
 
         .nav-link {
-            color: rgba(255, 255, 255, 0.88);
-            font-weight: 600;
-            margin: 0 0.25rem;
-            padding: 0.55rem 0.95rem;
-            border-radius: 999px;
-            transition: all 0.25s ease;
-            text-decoration: none;
-            white-space: nowrap;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
         }
 
         .nav-link:hover,
         .nav-link.active {
             color: white;
-            background-color: rgba(255, 255, 255, 0.16);
-            transform: translateY(-1px);
+            background-color: rgba(255, 255, 255, 0.15);
         }
 
-        /* Header layout: navbar sits near TOP */
-        .header-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 16px;
-        }
-
-        /* Keep logo+tagline stacked nicely */
-        .brand {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        /* Force nav to be horizontal and top-aligned */
-        .top-nav {
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-end;
-            gap: 6px;
-            margin-top: 2px;
-            flex-wrap: wrap;
-        }
-
-        /* ✅ Hero: more premium look */
         .hero {
-            position: relative;
-            background: radial-gradient(1200px 400px at 20% 0%, rgba(87, 204, 153, 0.20), transparent 60%),
-                radial-gradient(900px 420px at 90% 20%, rgba(255, 123, 84, 0.18), transparent 60%),
-                var(--light-blue);
-            padding: 3rem 0 2.5rem;
+            background-color: var(--light-blue);
+            padding: 3rem 0;
             border-bottom: 1px solid #dee2e6;
-            overflow: hidden;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: url("/img/hero-pattern.png");
-            background-size: 720px auto;
-            background-repeat: repeat;
-            opacity: 0.05;
-            pointer-events: none;
         }
 
         .hero h1 {
             color: var(--primary-color);
-            font-weight: 800;
-            margin-bottom: 0.8rem;
-            letter-spacing: -0.3px;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
 
         .hero p {
-            font-size: 1.08rem;
+            font-size: 1.1rem;
             color: var(--gray-color);
-            max-width: 740px;
-            margin: 0 auto 1.5rem;
-        }
-
-        /* ✅ Hero CTA row */
-        .hero-cta {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 8px;
-        }
-
-        .btn-hero-primary {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 999px;
-            padding: 0.65rem 1.25rem;
-            font-weight: 800;
-            box-shadow: 0 10px 22px rgba(26, 95, 122, 0.18);
-            transition: transform 0.15s ease, opacity 0.15s ease;
-            text-decoration: none;
-        }
-
-        .btn-hero-primary:hover {
-            color: white;
-            transform: translateY(-1px);
-            opacity: 0.95;
-        }
-
-        .btn-hero-secondary {
-            background: rgba(255, 255, 255, 0.65);
-            color: var(--primary-color);
-            border: 1px solid rgba(13, 76, 110, 0.15);
-            border-radius: 999px;
-            padding: 0.65rem 1.25rem;
-            font-weight: 800;
-            transition: transform 0.15s ease, opacity 0.15s ease;
-            text-decoration: none;
-            backdrop-filter: blur(6px);
-        }
-
-        .btn-hero-secondary:hover {
-            color: var(--primary-color);
-            transform: translateY(-1px);
-            opacity: 0.95;
-        }
-
-        /* ✅ Trust strip */
-        .hero-trust {
-            margin-top: 18px;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 12px;
-        }
-
-        .trust-card {
-            background: rgba(255, 255, 255, 0.70);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: 14px;
-            padding: 12px 14px;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            backdrop-filter: blur(6px);
-            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.04);
-        }
-
-        .trust-icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 12px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(87, 204, 153, 0.20);
-            color: var(--primary-color);
-            flex: 0 0 auto;
-        }
-
-        .trust-title {
-            margin: 0;
-            font-weight: 900;
-            color: var(--primary-color);
-            font-size: 0.95rem;
-            line-height: 1.2;
-        }
-
-        .trust-text {
-            margin: 2px 0 0;
-            color: #5f6c76;
-            font-size: 0.92rem;
-            line-height: 1.25;
+            max-width: 700px;
+            margin: 0 auto 2rem;
         }
 
         .curriculum-tabs {
-            margin-top: 22px;
-            margin-bottom: 1.25rem;
+            margin-bottom: 2rem;
             border-bottom: 2px solid #dee2e6;
         }
 
@@ -262,10 +106,9 @@
             color: var(--gray-color);
             border: none;
             border-radius: 0;
-            padding: 0.85rem 1.6rem;
-            font-weight: 900;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
             position: relative;
-            background: transparent;
         }
 
         .curriculum-tabs .nav-link.active {
@@ -274,94 +117,13 @@
             border-bottom: 3px solid var(--primary-color);
         }
 
-        /* ✅ Featured UACE tiles under hero */
-        .uace-feature-row {
-            margin-top: 18px;
-        }
-
-        .feature-tile {
-            height: 100%;
-            background: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .feature-tile:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 44px rgba(0, 0, 0, 0.10);
-        }
-
-        .feature-media {
-            height: 120px;
-            background: #f3f7fb;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transform: scale(1.02);
-        }
-
-        .feature-badge {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            color: var(--primary-color);
-            font-weight: 900;
-            font-size: 0.78rem;
-            padding: 6px 10px;
-            border-radius: 999px;
-            backdrop-filter: blur(6px);
-        }
-
-        .feature-body {
-            padding: 14px 14px 16px;
-        }
-
-        .feature-title {
-            margin: 0 0 6px;
-            font-weight: 900;
-            color: var(--primary-color);
-            font-size: 1.02rem;
-        }
-
-        .feature-desc {
-            margin: 0 0 10px;
-            color: #5f6c76;
-            font-size: 0.95rem;
-            line-height: 1.35;
-        }
-
-        .feature-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 900;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .feature-link:hover {
-            text-decoration: underline;
-        }
-
         .section-title {
             color: var(--primary-color);
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 2rem;
             padding-bottom: 0.75rem;
             border-bottom: 2px solid #e9ecef;
             position: relative;
-            letter-spacing: -0.2px;
         }
 
         .section-title::after {
@@ -394,129 +156,82 @@
 
         .subject-card {
             border: none;
-            border-radius: 14px;
+            border-radius: 10px;
             overflow: hidden;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            transition: transform 0.3s, box-shadow 0.3s;
             height: 100%;
-            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             margin-bottom: 1.5rem;
-            background: #ffffff;
         }
 
         .subject-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .subject-card .card-header {
             background-color: var(--primary-color);
             color: white;
-            font-weight: 900;
-            padding: 0.9rem 1.1rem;
+            font-weight: 600;
+            padding: 1rem 1.25rem;
             border: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
         }
 
         .subject-card .card-body {
-            padding: 1rem 1.1rem 1.15rem;
+            padding: 1.5rem;
         }
 
         .subject-level {
             color: var(--accent-color);
-            font-weight: 900;
-            margin-bottom: 0.25rem;
-        }
-
-        /* ✅ Better image display inside cards */
-        .card-media {
-            width: 100%;
-            height: 140px;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #f3f6f8;
-            margin: 10px 0 8px;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-        }
-
-        .card-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .card-meta {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 8px;
-        }
-
-        .meta-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            border-radius: 999px;
-            padding: 6px 10px;
-            font-weight: 800;
-            font-size: 0.78rem;
-            background: rgba(87, 204, 153, 0.15);
-            color: var(--primary-color);
-            border: 1px solid rgba(87, 204, 153, 0.20);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
 
         .btn-start {
             background-color: var(--secondary-color);
             color: white;
-            font-weight: 900;
-            padding: 0.55rem 1.4rem;
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
             border: none;
-            border-radius: 999px;
-            transition: transform 0.15s ease, opacity 0.15s ease;
-            margin-top: 0.75rem;
-            width: 100%;
+            border-radius: 30px;
+            transition: all 0.3s;
+            margin-top: 1rem;
         }
 
         .btn-start:hover {
             background-color: #46b883;
             color: white;
-            transform: translateY(-1px);
-            opacity: 0.96;
+            transform: scale(1.05);
         }
 
         .resource-card {
             border: 1px solid #dee2e6;
-            border-radius: 12px;
+            border-radius: 8px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
             background-color: white;
-            transition: all 0.25s ease;
-            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s;
         }
 
         .resource-card:hover {
             border-color: var(--primary-color);
-            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
-            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
         .resource-title {
             color: var(--primary-color);
-            font-weight: 900;
-            margin-bottom: 0.35rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
 
         .btn-download {
             background-color: var(--primary-color);
             color: white;
-            font-weight: 900;
-            padding: 0.55rem 1.3rem;
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
             border: none;
-            border-radius: 999px;
-            transition: all 0.2s ease;
+            border-radius: 4px;
+            transition: all 0.3s;
         }
 
         .btn-download:hover {
@@ -529,13 +244,10 @@
             border: 1px solid #ffecb5;
             color: #856404;
             padding: 0.5rem 1rem;
-            border-radius: 999px;
+            border-radius: 4px;
             font-size: 0.85rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 0.6rem;
-            font-weight: 800;
+            display: inline-block;
+            margin-top: 0.5rem;
         }
 
         .footer {
@@ -548,15 +260,14 @@
         .footer h5 {
             color: var(--secondary-color);
             margin-bottom: 1.5rem;
-            font-weight: 900;
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.82);
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             display: block;
-            margin-bottom: 0.55rem;
-            transition: color 0.2s ease;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
         }
 
         .footer-links a:hover {
@@ -581,10 +292,10 @@
             background-color: transparent;
             color: var(--primary-color);
             border: 2px solid var(--primary-color);
-            font-weight: 900;
-            padding: 0.65rem 2rem;
-            border-radius: 999px;
-            transition: all 0.2s ease;
+            font-weight: 600;
+            padding: 0.6rem 2rem;
+            border-radius: 30px;
+            transition: all 0.3s;
         }
 
         .btn-load-more:hover {
@@ -596,193 +307,11 @@
             font-size: 1.1rem;
             font-weight: 600;
             color: #f3091c;
-            margin-top: 0.75rem;
+            margin-top: 0.8rem;
             min-height: 1.5em;
             animation: fadeInUp 0.8s ease;
             text-align: center;
         }
-
-        /* =========================================
-   ✅ HERO TRUST (colorful + compact + modern)
-   ========================================= */
-
-        .hero-trust {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 10px;
-            margin-top: 14px;
-        }
-
-        .trust-card {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            /* ✅ reduced height */
-            padding: 10px 12px;
-            border-radius: 14px;
-
-            /* ✅ modern glassy look */
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(13, 76, 110, 0.12);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
-
-            overflow: hidden;
-            transform: translateY(0);
-            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-        }
-
-        /* ✅ top glow stripe */
-        .trust-card::before {
-            content: "";
-            position: absolute;
-            inset: 0 0 auto 0;
-            height: 3px;
-            background: linear-gradient(90deg, rgba(87, 204, 153, 1), rgba(255, 123, 84, 1));
-            opacity: .95;
-        }
-
-        /* ✅ soft colorful blob for attention */
-        .trust-card::after {
-            content: "";
-            position: absolute;
-            width: 160px;
-            height: 160px;
-            right: -70px;
-            top: -70px;
-            border-radius: 50%;
-            filter: blur(0px);
-            opacity: .18;
-        }
-
-        /* Hover = lift + more glow */
-        .trust-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 16px 28px rgba(0, 0, 0, 0.10);
-            border-color: rgba(26, 95, 122, 0.25);
-        }
-
-        /* ✅ compact icon bubble */
-        .trust-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0 0 40px;
-            color: #fff;
-            font-size: 16px;
-            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
-            position: relative;
-        }
-
-        /* ✅ tiny pulse ring (subtle attention) */
-        .trust-icon::after {
-            content: "";
-            position: absolute;
-            inset: -6px;
-            border-radius: 16px;
-            border: 2px solid rgba(255, 255, 255, 0.35);
-            opacity: 0;
-            transform: scale(0.9);
-            animation: trustPulse 2.6s ease-in-out infinite;
-        }
-
-        @keyframes trustPulse {
-            0% {
-                opacity: 0;
-                transform: scale(0.92);
-            }
-
-            35% {
-                opacity: .35;
-                transform: scale(1.02);
-            }
-
-            70% {
-                opacity: 0;
-                transform: scale(1.12);
-            }
-
-            100% {
-                opacity: 0;
-                transform: scale(0.92);
-            }
-        }
-
-        /* ✅ tighter typography = shorter cards */
-        .trust-title {
-            margin: 0 0 2px;
-            font-weight: 800;
-            font-size: 0.95rem;
-            color: #0d4c6e;
-            line-height: 1.1;
-        }
-
-        .trust-text {
-            margin: 0;
-            font-size: 0.85rem;
-            color: #495057;
-            line-height: 1.25;
-
-            /* ✅ keep it compact: 2 lines max */
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 4;
-            overflow: hidden;
-        }
-
-        /* =========================================
-   ✅ Color variations (3 different cards)
-   Works with trust-card--1/2/3 OR nth-child
-   ========================================= */
-
-        /* Card 1: green / teal */
-        .trust-card--1::after,
-        .hero-trust .trust-card:nth-child(1)::after {
-            background: radial-gradient(circle at 30% 30%, rgba(87, 204, 153, 1), rgba(87, 204, 153, 0));
-        }
-
-        .trust-card--1 .trust-icon,
-        .hero-trust .trust-card:nth-child(1) .trust-icon {
-            background: linear-gradient(135deg, #57cc99, #1a5f7a);
-        }
-
-        /* Card 2: orange / pink */
-        .trust-card--2::after,
-        .hero-trust .trust-card:nth-child(2)::after {
-            background: radial-gradient(circle at 30% 30%, rgba(255, 123, 84, 1), rgba(255, 123, 84, 0));
-        }
-
-        .trust-card--2 .trust-icon,
-        .hero-trust .trust-card:nth-child(2) .trust-icon {
-            background: linear-gradient(135deg, #ff7b54, #ff4d6d);
-        }
-
-        /* Card 3: blue / purple */
-        .trust-card--3::after,
-        .hero-trust .trust-card:nth-child(3)::after {
-            background: radial-gradient(circle at 30% 30%, rgba(66, 133, 244, 1), rgba(66, 133, 244, 0));
-        }
-
-        .trust-card--3 .trust-icon,
-        .hero-trust .trust-card:nth-child(3) .trust-icon {
-            background: linear-gradient(135deg, #4285f4, #7b2ff7);
-        }
-
-        /* ✅ Responsive */
-        @media (max-width: 992px) {
-            .hero-trust {
-                grid-template-columns: 1fr;
-            }
-
-            .trust-card {
-                border-radius: 14px;
-            }
-        }
-
 
         @keyframes fadeInUp {
             from {
@@ -796,15 +325,9 @@
             }
         }
 
-        @media (max-width: 992px) {
-            .hero-trust {
-                grid-template-columns: 1fr;
-            }
-        }
-
         @media (max-width: 768px) {
             .hero {
-                padding: 2rem 0 1.75rem;
+                padding: 2rem 0;
             }
 
             .hero h1 {
@@ -879,7 +402,7 @@
         }
 
         .kusoma-float-title {
-            font-weight: 900;
+            font-weight: 800;
             color: var(--primary-color);
             font-size: 1rem;
             margin: 0;
@@ -907,7 +430,7 @@
             padding: 8px 14px;
             border-radius: 999px;
             border: none;
-            font-weight: 900;
+            font-weight: 700;
             cursor: pointer;
             transition: transform 0.15s ease, opacity 0.15s ease;
             text-decoration: none;
@@ -966,9 +489,9 @@
     </style>
 </head>
 
-<body id="home">
+<body>
     <!-- Header -->
-    <!-- <header class="header">
+    <header class="header">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
@@ -991,39 +514,12 @@
                 </div>
             </div>
         </div>
-    </header> -->
-    <header class="header">
-        <div class="container">
-            <div class="header-row">
-                <div class="brand">
-                    <a href="#home" class="logo"><img src="/img/kusoma.png" alt="Kusoma Online"></a>
-                    <div class="tagline">A Platform Delivering Practical and Relevant Education Resources</div>
-                </div>
-
-                <div class="d-none d-md-block">
-                    <nav class="top-nav">
-                        <a href="#home" class="nav-link active" data-nav="home">Home</a>
-                        <a href="#uaceTab" class="nav-link" data-nav="uace">UACE</a>
-                        <a href="#nlscTab" class="nav-link" data-nav="nlsc">NLSC</a>
-                        <a href="#uceTab" class="nav-link" data-nav="uce">UCE</a>
-                        <a href="#footer" class="nav-link" data-nav="contact">Contact</a>
-                    </nav>
-                </div>
-
-                <div class="d-md-none">
-                    <button class="btn btn-outline-light" id="mobileMenuBtn">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
     </header>
-
 
     <!-- Mobile Menu -->
     <div class="d-md-none bg-light p-3" id="mobileMenu" style="display: none;">
         <nav class="d-flex flex-column">
-            <a href="#home" class="nav-link text-dark mb-2">Home</a>
+            <a href="#" class="nav-link text-dark mb-2">Home</a>
             <a href="#uaceTab" class="nav-link text-dark mb-2">UACE</a>
             <a href="#nlscTab" class="nav-link text-dark mb-2">NLSC</a>
             <a href="#uceTab" class="nav-link text-dark mb-2">UCE</a>
@@ -1033,122 +529,20 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container position-relative" style="z-index: 1;">
-            <div class="row align-items-center">
+        <div class="container">
+            <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12">
-                    <h1 class="text-center">UACE (Ugandan Advanced Level) Resources</h1>
+                    <h1 class="text-center">UACE Resources</h1>
 
                     <div class="hero-message">
                         <span id="rotatingText"></span>
                     </div>
 
-                    <p class="text-center">Revision made simple: clear notes, step-by-step videos, topical exercises,
-                        and past papers — built for Ugandan learners.</p>
-
-                    <!-- ✅ Hero CTAs (attention capture for A-Level) -->
-                    <div class="hero-cta">
-                        <a class="btn-hero-primary"
-                            href="https://kusomaonline.learnworlds.com/course/uace-mathematics-code-p210-1">
-                            Start UACE Mathematics <i class="fas fa-arrow-right ms-1"></i>
-                        </a>
-                        <a class="btn-hero-secondary" href="https://kusomaonline.learnworlds.com/courses">
-                            Browse All Courses <i class="fas fa-chevron-right ms-1"></i>
-                        </a>
-                    </div>
-
-                    <!-- ✅ Trust strip -->
-                    <!-- <div class="hero-trust">
-                        <div class="trust-card">
-                            <div class="trust-icon"><i class="fas fa-bullseye"></i></div>
-                            <div>
-                                <p class="trust-title">Exam-Focused</p>
-                                <p class="trust-text">Topical practice + UNEB-style questions.</p>
-                            </div>
-                        </div>
-                        <div class="trust-card">
-                            <div class="trust-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                            <div>
-                                <p class="trust-title">Step-by-Step</p>
-                                <p class="trust-text">Clear explanations for novice learners.</p>
-                            </div>
-                        </div>
-                        <div class="trust-card">
-                            <div class="trust-icon"><i class="fas fa-clock"></i></div>
-                            <div>
-                                <p class="trust-title">Learn Anytime</p>
-                                <p class="trust-text">Study on phone or laptop, at your pace.</p>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <div class="hero-trust">
-                        <div class="trust-card trust-card--1">
-                            <div class="trust-icon"><i class="fas fa-bullseye"></i></div>
-                            <div>
-                                <p class="trust-title">Exam-Focused</p>
-                                <p class="trust-text">Topical practice + UNEB-style questions.</p>
-                            </div>
-                        </div>
-
-                        <div class="trust-card trust-card--2">
-                            <div class="trust-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                            <div>
-                                <p class="trust-title">Step-by-Step</p>
-                                <p class="trust-text">Clear explanations for novice learners.</p>
-                            </div>
-                        </div>
-
-                        <div class="trust-card trust-card--3">
-                            <div class="trust-icon"><i class="fas fa-clock"></i></div>
-                            <div>
-                                <p class="trust-title">Learn Anytime</p>
-                                <p class="trust-text">Study on phone or laptop, at your pace.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    <p class="text-center">Access comprehensive educational resources including notes, videos, exercises,
+                        and textbooks for all levels.</p>
                 </div>
-
-                <div class="col-lg-6 col-md-12 col-sm-12 mt-4 mt-lg-0">
-                    <img src="/img/hero.png" alt="Education Resources" class="hero-img" loading="lazy">
-
-                    <!-- ✅ Engaging featured tiles (uses images you already have or can add later) -->
-                    <div class="row g-3 uace-feature-row">
-                        <div class="col-md-6">
-                            <div class="feature-tile">
-                                <div class="feature-media">
-                                    <img src="/img/maths-a-level-image.jpg" alt="UACE Mathematics" loading="lazy">
-                                    <span class="feature-badge"><i class="fas fa-fire me-1"></i> Most Popular</span>
-                                </div>
-                                <div class="feature-body">
-                                    <p class="feature-title">UACE Mathematics</p>
-                                    <p class="feature-desc">Full topic coverage + worked examples + practice.</p>
-                                    <a class="feature-link"
-                                        href="https://kusomaonline.learnworlds.com/course/uace-mathematics-code-p210-1">
-                                        Start Now <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-tile">
-                                <div class="feature-media">
-                                    <img src="/img/aEconomics.avif" alt="UACE Economics" loading="lazy">
-                                    <span class="feature-badge"><i class="fas fa-star me-1"></i> New</span>
-                                </div>
-                                <div class="feature-body">
-                                    <p class="feature-title">UACE Economics</p>
-                                    <p class="feature-desc">Notes, videos, and exam-style practice.</p>
-                                    <a class="feature-link"
-                                        href="https://kusomaonline.learnworlds.com/course/senior-five-economics">
-                                        Start Now <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <img src="/img/hero.png" alt="Education Resources" class="hero-img">
                 </div>
             </div>
 
@@ -1181,28 +575,11 @@
 
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
-                            <div class="card-header">
-                                <span>Mathematics</span>
-                                <span class="meta-pill"
-                                    style="background: rgba(255,255,255,0.18); color: #fff; border-color: rgba(255,255,255,0.18);">
-                                    <i class="fas fa-bolt"></i> Top
-                                </span>
-                            </div>
+                            <div class="card-header">Mathematics</div>
                             <div class="card-body">
                                 <div class="subject-level">S.5 & S.6</div>
-
-                                <div class="card-media">
-                                    <img src="/img/maths-a-level-image.jpg" alt="A-Level Mathematics" loading="lazy">
-                                </div>
-
                                 <p>Complete notes, videos, and exercises for A-level Mathematics.</p>
-
-                                <div class="card-meta">
-                                    <span class="meta-pill"><i class="fas fa-video"></i> Videos</span>
-                                    <span class="meta-pill"><i class="fas fa-book-open"></i> Notes</span>
-                                    <span class="meta-pill"><i class="fas fa-pen"></i> Practice</span>
-                                </div>
-
+                                <img src="/img/maths-a-level-image.jpg" alt="">
                                 <button class="btn btn-start"
                                     data-course-url="https://kusomaonline.learnworlds.com/course/uace-mathematics-code-p210-1">
                                     Start Now <i class="fas fa-arrow-right ms-1"></i>
@@ -1213,28 +590,11 @@
 
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
-                            <div class="card-header">
-                                <span>Economics</span>
-                                <span class="meta-pill"
-                                    style="background: rgba(255,255,255,0.18); color: #fff; border-color: rgba(255,255,255,0.18);">
-                                    <i class="fas fa-chart-line"></i> Growth
-                                </span>
-                            </div>
+                            <div class="card-header">Economics</div>
                             <div class="card-body">
                                 <div class="subject-level">S.5 & S.6</div>
-
-                                <div class="card-media">
-                                    <img src="/img/aEconomics.avif" alt="A-Level Economics" loading="lazy">
-                                </div>
-
                                 <p>Complete notes, videos, and exercises for Advanced Level Economics.</p>
-
-                                <div class="card-meta">
-                                    <span class="meta-pill"><i class="fas fa-book-open"></i> Notes</span>
-                                    <span class="meta-pill"><i class="fas fa-file-alt"></i> Topicals</span>
-                                    <span class="meta-pill"><i class="fas fa-pen"></i> Exam-style practice</span>
-                                </div>
-
+                                <img src="/img/aEconomics.avif" alt="">
                                 <button class="btn btn-start"
                                     data-course-url="https://kusomaonline.learnworlds.com/course/senior-five-economics">
                                     Start Now <i class="fas fa-arrow-right ms-1"></i>
@@ -1245,30 +605,11 @@
 
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
-                            <div class="card-header">
-                                <span>Entrepreneurship</span>
-                                <span class="meta-pill"
-                                    style="background: rgba(255,255,255,0.18); color: #fff; border-color: rgba(255,255,255,0.18);">
-                                    <i class="fas fa-lightbulb"></i> Skills
-                                </span>
-                            </div>
+                            <div class="card-header">Entrepreneurship</div>
                             <div class="card-body">
                                 <div class="subject-level">S.5 & S.6</div>
-
-                                <div class="card-media">
-                                    <img src="/img/aEntrepreneurship.avif" alt="A-Level Entrepreneurship"
-                                        loading="lazy">
-                                </div>
-
                                 <p>Complete notes, videos, and exercises for Entrepreneurship Education.</p>
-
-                                <div class="card-meta">
-                                    <span class="meta-pill"><i class="fas fa-list-check"></i> Tasks</span>
-                                    <span class="meta-pill"><i class="fas fa-video"></i> Videos</span>
-                                    <span class="meta-pill"><i class="fas fa-pen"></i> Exam-style Practice</span>
-                                </div>
-                                
-
+                                <img src="/img/aEntrepreneurship.avif" alt="">
                                 <button class="btn btn-start"
                                     data-course-url="https://kusomaonline.learnworlds.com/course/entrepreneurship-p230">
                                     Start Now <i class="fas fa-arrow-right ms-1"></i>
@@ -1282,13 +623,9 @@
                             <div class="card-header">History</div>
                             <div class="card-body">
                                 <div class="subject-level">S.5 & S.6</div>
-
-                                <div class="card-media">
-                                    <img src="/img/aHistory.avif" alt="A-Level History" loading="lazy">
-                                </div>
-
                                 <p>Complete notes, videos, and exercises for Advanced Level History.</p>
-                                <div class="coming-soon"><i class="fas fa-hourglass-half"></i> Coming Soon</div>
+                                <img src="/img/aHistory.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
                             </div>
                         </div>
                     </div>
@@ -1304,7 +641,7 @@
             </section>
 
             <!-- A-Level/UACE Question Banks -->
-            <!-- <section class="mb-5">
+            <section class="mb-5">
                 <h2 class="section-title">A-Level/U.A.C.E Question Banks: Past Papers</h2>
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
@@ -1312,13 +649,9 @@
                             <div class="card-header">Economics</div>
                             <div class="card-body">
                                 <div class="subject-level">S.5 & S.6</div>
-
-                                <div class="card-media">
-                                    <img src="/img/Economics.avif" alt="Economics Past Papers" loading="lazy">
-                                </div>
-
+                                <img src="/img/Economics.avif" alt="">
                                 <p>Question Banks for Advanced Level Economics.</p>
-                                <div class="coming-soon"><i class="fas fa-hourglass-half"></i> Coming Soon</div>
+                                <div class="coming-soon">Coming Soon</div>
                             </div>
                         </div>
                     </div>
@@ -1327,7 +660,7 @@
                 <div class="load-more">
                     <button class="btn btn-load-more">Load More <i class="fas fa-chevron-down ms-1"></i></button>
                 </div>
-            </section> -->
+            </section>
 
             <!-- Personal Development Section -->
             <section class="mb-5">
@@ -1338,12 +671,7 @@
                             <div class="card-header">Self Employment for Young People</div>
                             <div class="card-body">
                                 <div class="subject-level">For Youths</div>
-
-                                <div class="card-media">
-                                    <img src="/img/Selfemployment.avif" alt="Self Employment for Young People"
-                                        loading="lazy">
-                                </div>
-
+                                <img src="/img/Selfemployment.avif" alt="">
                                 <button class="btn btn-start"
                                     data-course-url="https://kusomaonline.learnworlds.com/course/self-employment-for-young-people">
                                     Start Now <i class="fas fa-arrow-right ms-1"></i>
@@ -1355,7 +683,7 @@
             </section>
 
             <!-- Primary School Section -->
-            <!-- <section class="mb-5">
+            <section class="mb-5">
                 <h2 class="section-title">Primary School</h2>
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
@@ -1363,20 +691,16 @@
                             <div class="card-header">P.L.E Past Papers</div>
                             <div class="card-body">
                                 <div class="subject-level">P.5 - P.7</div>
-
-                                <div class="card-media">
-                                    <img src="/img/primary.avif" alt="Primary School Resources" loading="lazy">
-                                </div>
-
-                                <div class="coming-soon"><i class="fas fa-hourglass-half"></i> Coming Soon</div>
+                                <img src="/img/primary.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- Early Childhood Development Section -->
-            <!-- <section class="mb-5">
+            <section class="mb-5">
                 <h2 class="section-title">Early Childhood Development</h2>
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
@@ -1384,167 +708,161 @@
                             <div class="card-header">Writing</div>
                             <div class="card-body">
                                 <div class="subject-level">Nursery</div>
-
-                                <div class="card-media">
-                                    <img src="/img/early_childhood.avif" alt="Early Childhood Development"
-                                        loading="lazy">
-                                </div>
-
-                                <div class="coming-soon"><i class="fas fa-hourglass-half"></i> Coming Soon</div>
+                                <img src="/img/early_childhood.avif" alt="">
+                                <div class="coming-soon">Coming Soon</div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
         </div>
 
         <!-- ✅ NLSC Content (Initially hidden) -->
         <div id="nlscContent" style="display: none;">
 
-            <!-- <section class="mb-5">
+            <section class="mb-5">
                 <h2 class="section-title">NLSC (New Lower Secondary Curriculum): Notes, Videos & Exercises</h2>
-                <div class="row"> -->
+                <div class="row">
 
-            <!-- ✅ Biology (PDF download style) -->
-            <!-- <div class="col-md-3 col-sm-6">
+                    <!-- ✅ Biology (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
                         <div class="card subject-card compact-card">
                             <div class="card-header">Biology</div>
                             <div class="card-body">
                                 <img src="/img/BiologyNewCurriculum.avif" alt="Biology New Curriculum"
-                                    class="subject-img" loading="lazy">
+                                    class="subject-img">
                                 <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_e8473b80330a4ba4a5eb4e0bad12ad5d.pdf"
                                     class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
                                     Download <i class="fas fa-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
-            <!-- ✅ Physics (PDF download style) -->
-            <!-- <div class="col-md-3 col-sm-6">
+                    <!-- ✅ Physics (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
                         <div class="card subject-card compact-card">
                             <div class="card-header">Physics</div>
                             <div class="card-body">
                                 <img src="/img/PhysicsNewCurriculum.avif" alt="Physics New Curriculum"
-                                    class="subject-img" loading="lazy">
+                                    class="subject-img">
                                 <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_bb03afeccbe546198f90eecf1c103234.pdf"
                                     class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
                                     Download <i class="fas fa-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
-            <!-- ✅ Mathematics (PDF download style) -->
-            <!-- <div class="col-md-3 col-sm-6">
+                    <!-- ✅ Mathematics (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
                         <div class="card subject-card compact-card">
                             <div class="card-header">Mathematics</div>
                             <div class="card-body">
                                 <img src="/img/MathematicsNewCurriculumPrototype.avif" alt="Mathematics New Curriculum"
-                                    class="subject-img" loading="lazy">
+                                    class="subject-img">
                                 <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_c80974e7e693463cb1c6aaed4be61bc7.pdf"
                                     class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
                                     Download <i class="fas fa-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
-            <!-- ✅ Chemistry (PDF download style) -->
-            <!-- <div class="col-md-3 col-sm-6">
+                    <!-- ✅ Chemistry (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
                         <div class="card subject-card compact-card">
                             <div class="card-header">Chemistry</div>
                             <div class="card-body">
                                 <img src="/img/ChemistryNewCurriculum.avif" alt="Chemistry New Curriculum"
-                                    class="subject-img" loading="lazy">
+                                    class="subject-img">
                                 <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_46add59c851545eb9a6debb12120ea30.pdf"
                                     class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
                                     Download <i class="fas fa-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
-            <!-- </div> -->
+                </div>
 
-            <!-- <div class="section-divider"></div>
+                <div class="section-divider"></div>
 
-                <div class="row mt-3"> -->
+                <div class="row mt-3">
 
-            <!-- ✅ History (PDF download style) -->
-            <!-- <div class="col-md-3 col-sm-6">
+                    <!-- ✅ History (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
                         <div class="card subject-card compact-card">
                             <div class="card-header">History</div>
                             <div class="card-body">
                                 <img src="/img/HistoryNewCurriculum.avif" alt="History New Curriculum"
-                                    class="subject-img" loading="lazy">
+                                    class="subject-img">
                                 <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_58985b0b54a44e8ea1d47f6a9084ec22.pdf"
                                     class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
                                     Download <i class="fas fa-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
-            <!-- ✅ Geography (PDF download style) -->
-            <!-- <div class="col-md-3 col-sm-6">
+                    <!-- ✅ Geography (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
                         <div class="card subject-card compact-card">
                             <div class="card-header">Geography</div>
                             <div class="card-body">
                                 <img src="/img/GeographyNewCurriculum.avif" alt="Geography New Curriculum"
-                                    class="subject-img" loading="lazy">
+                                    class="subject-img">
                                 <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_4c7293db55e04f86ae913f5463f8cf2f.pdf"
                                     class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
                                     Download <i class="fas fa-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
-            <!-- ✅ English and Lit (PDF download style) -->
-            <!-- <div class="col-md-3 col-sm-6">
+                    <!-- ✅ English and Lit (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
                         <div class="card subject-card compact-card">
                             <div class="card-header">English and Literature</div>
                             <div class="card-body">
                                 <img src="/img/EnglishNewCurriculum.avif" alt="English New Curriculum"
-                                    class="subject-img" loading="lazy">
+                                    class="subject-img">
                                 <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_2e412ace726545d995d1aa7b461f25c9.pdf"
                                     class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
                                     Download <i class="fas fa-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
-            <!-- ✅ CRE (PDF download style) -->
-            <!-- <div class="col-md-3 col-sm-6">
+                    <!-- ✅ CRE (PDF download style) -->
+                    <div class="col-md-3 col-sm-6">
                         <div class="card subject-card compact-card">
                             <div class="card-header">CRE</div>
                             <div class="card-body">
-                                <img src="/img/CRENewCurriculum.avif" alt="CRE New Curriculum" class="subject-img"
-                                    loading="lazy">
+                                <img src="/img/CRENewCurriculum.avif" alt="CRE New Curriculum" class="subject-img">
                                 <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_8228c5980fc74b2ea1f3fc214a4cbbc5.pdf"
                                     class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
                                     Download <i class="fas fa-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
-            <!-- </div> -->
+                </div>
 
-            <!-- <div class="section-divider"></div>
+                <div class="section-divider"></div>
 
-                <div class="row mt-3"> -->
+                <div class="row mt-3">
 
-            <!-- ✅ Free Chemistry PowerPoints -->
-            <!-- <div class="col-md-3 col-sm-6">
+                    <!-- ✅ Free Chemistry PowerPoints -->
+                    <div class="col-md-3 col-sm-6">
                         <div class="card subject-card compact-card">
                             <div class="card-header">Free Chemistry PowerPoints</div>
                             <div class="card-body">
                                 <img src="/img/CHEMISTRYCHAPTERONEPOWERPOINTCOVER.avif" alt="Chemistry PowerPoints"
-                                    class="subject-img" loading="lazy">
+                                    class="subject-img">
 
                                 <a href="https://7f8356f6-723f-4771-804f-d406597e5d6b.filesusr.com/ugd/af923b_d17955b48a0742c696f6d87154aad31d.pptx?dn=TOPIC%20ONE_Chemistry%20and%20Society.pptx"
                                     class="btn btn-start mt-2" target="_blank" rel="noopener noreferrer">
@@ -1552,15 +870,19 @@
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
-            <!-- </div>
+                </div>
 
-            </section> -->
+            </section>
+        </div>
+
+        <!-- ✅ UCE Content (Initially hidden) -->
+        <div id="uceContent" style="display: none;">
 
             <!--O-Level/UCE notes Section -->
             <section class="mb-5">
-                <h2 class="section-title">New Lower Secondary Curriculum/O-Level Notes, Videos & Exercises</h2>
+                <h2 class="section-title">O-Level/U.C.E Notes, Videos & Exercises</h2>
                 <div class="row">
 
                     <div class="col-md-3 col-sm-6">
@@ -1568,11 +890,7 @@
                             <div class="card-header">Biology</div>
                             <div class="card-body">
                                 <div class="subject-level">S1 - S4</div>
-
-                                <div class="card-media">
-                                    <img src="/img/oBiology.avif" alt="Biology" loading="lazy">
-                                </div>
-
+                                <img src="/img/oBiology.avif" alt="Biology">
                                 <p>Complete notes, videos, and exercises for Ordinary Level Biology.</p>
 
                                 <button class="btn btn-start"
@@ -1588,11 +906,7 @@
                             <div class="card-header">Physics</div>
                             <div class="card-body">
                                 <div class="subject-level">S1 - S4</div>
-
-                                <div class="card-media">
-                                    <img src="/img/PhysicsO.avif" alt="Physics" loading="lazy">
-                                </div>
-
+                                <img src="/img/PhysicsO.avif" alt="">
                                 <p>Complete notes, videos, and exercises for Ordinary Level Physics.</p>
 
                                 <button class="btn btn-start"
@@ -1608,11 +922,7 @@
                             <div class="card-header">Mathematics</div>
                             <div class="card-body">
                                 <div class="subject-level">S1 - S4</div>
-
-                                <div class="card-media">
-                                    <img src="/img/oMath.avif" alt="Mathematics" loading="lazy">
-                                </div>
-
+                                <img src="/img/oMath.avif" alt="">
                                 <p>Complete notes, videos, and exercises for Ordinary Level Mathematics.</p>
 
                                 <button class="btn btn-start"
@@ -1628,11 +938,7 @@
                             <div class="card-header">Chemistry</div>
                             <div class="card-body">
                                 <div class="subject-level">S1 - S4</div>
-
-                                <div class="card-media">
-                                    <img src="/img/oChemistry.avif" alt="Chemistry" loading="lazy">
-                                </div>
-
+                                <img src="/img/oChemistry.avif" alt="">
                                 <p>Complete notes, videos, and exercises for Ordinary Level Chemistry.</p>
                                 <button class="btn btn-start"
                                     data-course-url="https://kusomaonline.learnworlds.com/course/o-level-chemisty">
@@ -1652,17 +958,9 @@
                 </div>
             </section>
 
-
-        </div>
-
-        <!-- ✅ UCE Content (Initially hidden) -->
-        <div id="uceContent" style="display: none;">
-
-
-
             <!-- UCE/O-Level Digital Exams -->
             <section class="mb-5">
-                <h2 class="section-title">Old Ordinary Level Secondary Curriculum: UCE Past Papers</h2>
+                <h2 class="section-title">Digital Exams: UCE Past Papers</h2>
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="card subject-card">
@@ -1718,7 +1016,7 @@
                         <div class="resource-card">
                             <h4 class="resource-title">Mathematics</h4>
                             <p class="text-muted">UCE Exams</p>
-                            <div class="coming-soon"><i class="fas fa-hourglass-half"></i> Coming Soon</div>
+                            <div class="coming-soon">Coming Soon</div>
                         </div>
                     </div>
                 </div>
@@ -1729,7 +1027,7 @@
                         <div class="resource-card">
                             <h4 class="resource-title">Economics</h4>
                             <p class="text-muted">S5 - S6</p>
-                            <div class="coming-soon"><i class="fas fa-hourglass-half"></i> Coming Soon</div>
+                            <div class="coming-soon">Coming Soon</div>
                         </div>
                     </div>
                 </div>
@@ -1743,7 +1041,7 @@
                         <div class="resource-card">
                             <h4 class="resource-title">P.L.E Past Papers</h4>
                             <p class="text-muted">Science Exams</p>
-                            <div class="coming-soon"><i class="fas fa-hourglass-half"></i> Coming Soon</div>
+                            <div class="coming-soon">Coming Soon</div>
                         </div>
                     </div>
                 </div>
@@ -1860,16 +1158,13 @@
 
                 if (type === 'uace') {
                     showOnly(uaceContent);
-                    document.querySelector('.hero h1').textContent = 'UACE (Advanced-Level) Resources';
-                    setHeaderNavActive('uace');
+                    document.querySelector('.hero h1').textContent = 'UACE Resources';
                 } else if (type === 'nlsc') {
                     showOnly(nlscContent);
                     document.querySelector('.hero h1').textContent = 'NLSC (New Lower Secondary Curriculum) Resources';
-                    setHeaderNavActive('nlsc');
                 } else {
                     showOnly(uceContent);
-                    document.querySelector('.hero h1').textContent = 'UCE (Old Lower Secondary Curriculum) Resources';
-                    setHeaderNavActive('uce');
+                    document.querySelector('.hero h1').textContent = 'UCE Resources';
                 }
             });
         });
@@ -1880,13 +1175,6 @@
             if (tab) tab.click();
         }
 
-        // ✅ Make top nav highlight nicely
-        function setHeaderNavActive(key) {
-            document.querySelectorAll('.top-nav .nav-link').forEach(a => a.classList.remove('active'));
-            const target = document.querySelector(`.top-nav .nav-link[data-nav="${key}"]`);
-            if (target) target.classList.add('active');
-        }
-
         // Desktop nav
         document.querySelectorAll('header nav a[href^="#"]').forEach(link => {
             link.addEventListener('click', function () {
@@ -1894,8 +1182,6 @@
                 if (href === '#uaceTab') activateTabById('uaceTab');
                 if (href === '#nlscTab') activateTabById('nlscTab');
                 if (href === '#uceTab') activateTabById('uceTab');
-                if (href === '#home') setHeaderNavActive('home');
-                if (href === '#footer') setHeaderNavActive('contact');
             });
         });
 
